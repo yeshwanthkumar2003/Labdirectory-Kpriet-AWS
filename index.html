@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <title>Labdirectory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+   
+</head>
+<body >
+    <div class="bg-image"
+     style="background-image: url('https://scontent.fmaa1-3.fna.fbcdn.net/v/t1.6435-9/117119906_3063294160444281_8484224654734389017_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=cSCl0IHgT_wAX-j3DpL&_nc_ht=scontent.fmaa1-3.fna&oh=00_AT8QTq2cjSdFzNBhk2PsNVsfn3NP4C16XvgZNYMVj2yxrg&oe=631DA449'); height: 10rem;">
+    <h1 style="margin-left:35rem">Kpriet Lab directory</h1>
+    <h2 style="margin-left:35rem">Cloud Lab Maintanence</h2>
+    <form method="post" autocomplete="off" name="google-sheet">
+        
+        <div class="form-group"><input class="form-control" type="text" name="Name" placeholder="Name"></div>
+        <div class="form-group"><input class="form-control" type="text" name="rollno" placeholder="rollno"></div>
+        <div class="form-group"><input class="form-control" type="email" name="Email" placeholder="Email"></div>
+        <div class="form-group"><input class="form-control" list="browser" name="Dept" placeholder="Dept">
+            <datalist id="browser">
+                <option value="ECE">
+                <option value="CSE">
+                <option value="EEE">
+                <option value="BME">
+                <option value="Chemical">
+                <option value="Mech">
+                <option value="Civil">
+                <option value="AI & DS">
+                <option value="AI & DS">
+                    <option value="AI & DS">
+
+                
+
+
+        </datalist></div>
+        <div class="form-group"><input class="form-control" list="browsers" name="Labname" placeholder="Labname">
+                <datalist id="browsers">
+                    <option value="Graphics Vision Lab">
+                    <option value="Maac Lab">
+                    <option value="Digital Communication Lab">
+                    <option value="HPC Lab">
+                    <option value="Emurgo lab">
+        </datalist></div>
+        <div class="form-group"><input class="form-control" type="paragraph" name="purpose" placeholder="Purpose"></div>
+        <div class="form-group"><input class="form-control" type="text" name="systemno" placeholder="systemno "></div>
+        <div class="form-group"><input class="form-control" type="date" name="date" placeholder="dd/mm/yyyy"></div>
+        <p>In Time</p>
+        <div class="form-group"><input class="form-control" type="time" name="intime" placeholder="Intime" step="900" onfocus="this.type='time'"></div>
+        <p>OUT Time</p>
+        <div class="form-group"><input class="form-control" type="time" name="outtime" placeholder="Outtime" step="900" onfocus="this.type='time'"></div>
+
+
+        <div class="form-group">
+                
+         
+        
+        <div class="form-group">
+        <input type="submit" name="submit" value="Sign up" class="btn btn-primary" width="700px">
+         </div>
+    </div>
+      
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyPLNVQwAYgUJ-Xrb6GCDhiDZcaVy9W_-dzbzkssirRVGpjBvfLWJlK-iOiUUo0jNwEcQ/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <p style="margin-left:40rem;">Created by yeshwanth</p>
+
+
+</body>
+</html>
